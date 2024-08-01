@@ -10,14 +10,13 @@
 
 body{
     background-image: url("images/background.jpg");
-    background-color: rgb(4, 17, 27,0.7);
+    background-color: rgb(4, 17, 27,0.8);
     background-blend-mode: multiply;
     background-size: cover;
 }
 
 
 nav {
-    position: fixed;
     top: 0;
     width: 100%;
     color: #fff;
@@ -26,6 +25,7 @@ nav {
     display: flex;
     justify-content: center;
     margin: 0;
+    gap: 50px;
 }
 
 nav ul{
@@ -118,4 +118,27 @@ nav a:hover{
     color: rgb(161, 172, 179);
     margin: 0;
     padding: 0;
+}
+
+.location-map {
+flex-wrap: wrap;
+display: flex;
+gap: 300px;
+}
+
+.icons-list {
+   align-items: flex-start;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.login-btn{
+    border: 1px solid rgb(31, 209, 96);
+    background-color: rgb(70, 227, 128,0.5);
+    color: #fff;
+}
+
+.custom-countainer{
+    gap: 200px;
 }

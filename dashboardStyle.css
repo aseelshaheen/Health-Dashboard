@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
 
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
 
 .display{
     align-items: center;
     display: flex;
     flex-direction: column;
     
-}
-:root {
-  --main-color: #f8faff; /* A very light blue tint */
-  --text-color: #ecebf4;
-  --dark-text-color: #293842;
 }
 
 * {
@@ -20,8 +23,8 @@
 }
 
 body {
-  background-color: var(--main-color);
-  color: var(--text-color);
+  background-color: #f8faff;
+  color: #ecebf4;
   font-family: "Nunito", sans-serif;
   height: 100vh;
 }
@@ -62,17 +65,24 @@ p {
 .custom-container > div:hover {
   opacity: 0.7;
   transform: scale(0.98);
+  cursor: pointer;
 }
 
 .bg1 {
-  background-image: url("images/background.jpg");
-  text-shadow: 1px 1px 2px var(--main-color);
+  background-image: url("images/background2.jpg");
+  text-shadow: 1px 1px 2px #f8faff;
 }
 
 .bg2 {
-  background: var(--text-color) url("images/daysActivity.jpg");
-  color: var(--dark-text-color);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: #ecebf4 url("images/background2.jpg");
+  color: #293842;
+  text-shadow: 0 1px 0 rgba(93, 89, 89, 0.4);
+}
+
+.bg3 {
+  background: #ecebf4 url("images/background2.jpg");
+  color: #293842;
+  text-shadow: 0 1px 0 rgba(93, 89, 89, 0.4);
 }
 
 .custom-container > div:first-of-type,
@@ -88,14 +98,7 @@ p {
   }
 }
 
-@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
-@font-face {
-    font-family: "Booter - Zero Zero";
-    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
-         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
 body{
@@ -123,7 +126,7 @@ nav ul li{
 }
 nav a{
     text-decoration: none;
-    color: rgb(161, 172, 179);
+    color: rgb(255, 255, 255);
     font-size: 1.2em;
     padding: 1em;
 }
@@ -199,7 +202,26 @@ nav a:hover{
 
 * {
     font-family: "Laviossa Medium";
-    color: rgb(161, 172, 179);
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+}
+
+
+dialog{
+  width: 500px;
+  height: 400px;
+  background-color: rgba(42, 47, 51, 0.8); /* Use rgba for transparency */
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Corrected to align-items */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.login-btn{
+  border: 1px solid rgb(31, 209, 96);
+  background-color: rgb(70, 227, 128,0.5);
+  color: #fff;
 }
