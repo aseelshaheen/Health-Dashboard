@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-          crossorigin="anonymous"
-        />
-    
-        <link rel="script" href="store.js">
-    
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="mainStyle.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="mainStyle.css" />
+    <title>Health Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li> <a href="scheduale.html">SCHEDUALE</a></li>
+                <li> <a href="location.html">CONTACT</a></li>
+                <li> <a href="store.html">STORE</a></li>
+            </ul>
+            <button class="btn login-btn" type="button" onclick="location.href='signIn.html';">Log In</button>
+            <ul class="icons-list">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png" height="40px"></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><img src="images/icons8-youtube-50.png" height="40px"></a></li>
+            </ul>
+        </nav>
+        <h1 class="gym-name">BalanceFit</h1> 
+    </header>
+    <main class="display">
+        <p class="description">BalanceFit is a lifestyle gym dedicated to holistic wellness,<br>
+            offering tailored fitness programs that blend strength,<br>
+            flexibility, and mindfulness. With our exclusive health dashboard,<br>
+            members can track progress, set goals, and stay motivated on their journey to balanced living.</p>
 
-        <title>Health Dashboard</title>
+        <!-- <button class="custom-btn" type="button" onclick="openMsgDialog()">DASHBOARD</button> -->
+        <button class="custom-btn" type="button" onclick="location.href='healthDetails.html';">DASHBOARD</button>
+    </main>
+    <section>
+        <dialog id="msgDialog" hidden>
+            
+                <button class="btn close-btn" type="button" onclick="closeMsgDialog()">Close</button>
+                
+           
+            <div class="container custom-div" >
+                <h3>You Have Not Signed In</h3>
+            </div>
+            
+        </dialog>
+    </section>
 
-    </head>
+    <!-- JavaScript Code -->
+    <script>
+        function openMsgDialog() {
+            const dialog = document.getElementById('msgDialog');
+            dialog.removeAttribute('hidden'); // Remove the hidden attribute
+            dialog.showModal();
+        }
 
-    <body>
-        <header >
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li> <a href="scheduale.html">SCHEDUALE</a></li>
-                    <li> <a href="location.html">CONTACT</a></li>
-                    <li> <a href="store.html">STORE</a></li>
-                    
-                </ul>
-                <button class="btn login-btn" type="button">Log In</button>
-                <ul class="icons-list">
-                    <li><a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png" height="40px"></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank"><img src="images/icons8-youtube-50.png" height="40px"></a></li>
-                </ul>
-            </nav>
-            <h1 class="gym-name">BalanceFit</h1> 
-
-        </header>
-        <main class="display">
-        
-               <p class="description">BalanceFit is a lifestyle gym dedicated to holistic wellness,<br>
-                offering tailored fitness programs that blend strength,<br>
-                flexibility, and mindfulness. With our exclusive health dashboard,<br>
-                members can track progress, set goals, and stay motivated on their journey to balanced living.</p>
-
-                <button class="custom-btn" type="button" onclick="location.href='healthDetails.html';">DASHBOARD</button>
-
-
-        </main>
-    </body>
+        function closeMsgDialog() {
+            const dialog = document.getElementById('msgDialog');
+            dialog.close();
+            dialog.setAttribute('hidden', 'true'); // Re-add the hidden attribute
+        }
+    </script>
+</body>
 </html>

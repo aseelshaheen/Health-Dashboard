@@ -139,6 +139,78 @@ gap: 300px;
     color: #fff;
 }
 
+dialog {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(42, 47, 51);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.close-btn{
+    background-color: rgb(42, 47, 51);
+    color: #fff;
+    width: 140px;
+    height: 50px;
+    border-radius: 10%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    background-color: #6d7377;
+    color: #02101a;
+}
+
 .custom-countainer{
     gap: 200px;
+}
+
+.custom-div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 50%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* .form-group input[type="date"],
+.form-group input[type="time"] {
+    width: calc(50%);
+} */
+.form-group input{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.form-group input[type="submit"]:hover {
+    background-color: #646262;
+}
+
+.login-btn{
+    border: 1px solid rgb(31, 209, 96);
+    background-color: rgb(70, 227, 128,0.5);
+    color: #fff;
 }

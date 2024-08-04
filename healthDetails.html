@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="dashboardStyle.css" />
     <title>Health Dashboard</title>
 
-    <script src="healthDetails.js"> async</script>
-
+    <script src="healthDetails.js"></script>
 </head>
 <body>
     <header>
@@ -27,7 +26,6 @@
                 <li> <a href="scheduale.html">SCHEDUALE</a></li>
                 <li> <a href="location.html">CONTACT</a></li>
                 <li> <a href="store.html">STORE</a></li>
-                
             </ul>
             <ul class="icons-list">
                 <li><a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png" height="40px"></a></li>
@@ -42,58 +40,106 @@
                 <img src="images/bmiIcon.png" height="70px">
                 <h3>BMI & Body Composition</h3>
             </div>
-            <div class="bg1">
+            <div class="bg1" onclick="openBtrDialog()">
                 <h2><i class="fas fa-battery-three-quarters"></i></h2>
-                <p>Heart Rate</p>
+                <p>Battery</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openMilesDialog()">
                 <h2><i class="fas fa-running"></i></h2>
                 <p>Miles</p>
             </div>
-            <div class="bg1">
+            <div class="bg1"  onclick="openTempDialog()">
                 <h2>37 &deg;C</h2>
                 <p>Temperature</p>
             </div>
-            <div class="bg1">
+            <div class="bg1" onclick="openSleepDialog()"> 
                 <h2><i class="fas fa-bed"></i></h2>
                 <p>Sleep Keep</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openHeartRDialog()">
                 <h2>75 <span>bpm</span></h2>
                 <p>Heart Rate</p>
             </div>
-            <div class="bg1">
+            <div class="bg1" onclick="openWeightDialog()">
                 <h2>170 <span>lbs</span></h2>
                 <p>Weight</p>
             </div>
-            <div class="bg1">
+            <div class="bg1" onclick="openFatPDialog()">
                 <h2>24 <span>%</span></h2>
                 <p>Fat Percentage</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openBloodDialog()">
                 <h2>90 <span>mgdl</span></h2>
                 <p>Blood Glucose</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openAVGDialog()">
                 <h2>2080 <span>kcal</span></h2>
                 <p>AVG Consumption</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openWorkoutDialog()">
                 <h2><i class="fas fa-dumbbell"></i></h2>
                 <p>Workouts</p>
             </div>
-            <div class="bg2">
+            <div class="bg2" onclick="openHydrationDialog()">
                 <h2>61 <span>%</span></h2>
                 <p>Body Hydration</p>
             </div>
         </div>
     </section>
     <section class="container display">
-        <dialog id="BMIDialog">
-            <button type="button" onclick="closeBMIDialog()">Close</button>
+        <dialog id="BMIDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeBMIDialog()">Close</button>
         </dialog>
+
+        <dialog id="BtrDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeBtrDialog()">Close</button>
+        </dialog>
+
+
+        <dialog id="TempDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeTempDialog()">Close</button>
+        </dialog>
+
+        <dialog id="SleepDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeSleepDialog()">Close</button>
+        </dialog>
+
+        <dialog id="HeartRDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeHeartRDialog()">Close</button>
+        </dialog>
+
+
+        <dialog id="WeightDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeWeightDialog()">Close</button>
+        </dialog>
+
+        <dialog id="FatPDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeFatPDialog()">Close</button>
+        </dialog>
+
+        <dialog id="BloodDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeBloodDialog()">Close</button>
+        </dialog>
+
+
+        <dialog id="AVGDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeAVGDialog()">Close</button>
+        </dialog>
+
+
+
+        <dialog id="WorkoutDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeWorkoutDialog()">Close</button>
+        </dialog>
+
+
+        <dialog id="HydrationDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeHydrationDialog()">Close</button>
+        </dialog>
+        
     </section>
 
-
+    
+    
 </body>
 </html>
