@@ -36,108 +36,124 @@
     </header>
     <section class="container">
         <div class="custom-container">
-            <div class="bg1" onclick="openBMIDialog()">
+            <div class="bg1" onclick="openDialog('BMIDialog')">
                 <img src="images/bmiIcon.png" height="70px">
                 <h3>BMI & Body Composition</h3>
             </div>
-            <div class="bg1" onclick="openBtrDialog()">
+            <div class="bg1" onclick="openDialog('BtrDialog')">
                 <h2><i class="fas fa-battery-three-quarters"></i></h2>
                 <p>Battery</p>
             </div>
-            <div class="bg2" onclick="openMilesDialog()">
+            <div class="bg2" onclick="openDialog('MilesDialog')">
                 <h2><i class="fas fa-running"></i></h2>
                 <p>Miles</p>
             </div>
-            <div class="bg1"  onclick="openTempDialog()">
+            <div class="bg1" onclick="openDialog('TempDialog')">
                 <h2>37 &deg;C</h2>
                 <p>Temperature</p>
             </div>
-            <div class="bg1" onclick="openSleepDialog()"> 
+            <div class="bg1" onclick="openDialog('SleepDialog')"> 
                 <h2><i class="fas fa-bed"></i></h2>
                 <p>Sleep Keep</p>
             </div>
-            <div class="bg2" onclick="openHeartRDialog()">
+            <div class="bg2" onclick="openDialog('HeartRDialog')">
                 <h2>75 <span>bpm</span></h2>
                 <p>Heart Rate</p>
             </div>
-            <div class="bg1" onclick="openWeightDialog()">
+            <div class="bg1" onclick="openDialog('WeightDialog')">
                 <h2>170 <span>lbs</span></h2>
                 <p>Weight</p>
             </div>
-            <div class="bg1" onclick="openFatPDialog()">
+            <div class="bg1" onclick="openDialog('FatPDialog')">
                 <h2>24 <span>%</span></h2>
                 <p>Fat Percentage</p>
             </div>
-            <div class="bg2" onclick="openBloodDialog()">
+            <div class="bg2" onclick="openDialog('BloodDialog')">
                 <h2>90 <span>mgdl</span></h2>
                 <p>Blood Glucose</p>
             </div>
-            <div class="bg2" onclick="openAVGDialog()">
+            <div class="bg2" onclick="openDialog('AVGDialog')">
                 <h2>2080 <span>kcal</span></h2>
                 <p>AVG Consumption</p>
             </div>
-            <div class="bg2" onclick="openWorkoutDialog()">
+            <div class="bg2" onclick="openDialog('WorkoutDialog')">
                 <h2><i class="fas fa-dumbbell"></i></h2>
                 <p>Workouts</p>
             </div>
-            <div class="bg2" onclick="openHydrationDialog()">
+            <div class="bg2" onclick="openDialog('HydrationDialog')">
                 <h2>61 <span>%</span></h2>
                 <p>Body Hydration</p>
             </div>
         </div>
     </section>
+    
     <section class="container display">
         <dialog id="BMIDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeBMIDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('BMIDialog')">Close</button>
+            <br><br><br>
+            <ul>
+                <li><strong>BMI</strong>:
+                    <ul>
+                        <li>Height: 1.75 m (5'9")</li>
+                        <li>Weight: 70 kg (154 lbs)</li>
+                        <li>BMI Calculation: <code>70 / 1.75^2 = 22.86</code> (Normal weight)</li>
+                    </ul>
+                </li>
+                <li><strong>Body Composition</strong>:
+                    <ul>
+                        <li>Body Fat Percentage: 20%</li>
+                        <li>Lean Body Mass: 56 kg (123 lbs)</li>
+                        <li>Fat Mass: 14 kg (31 lbs)</li>
+                    </ul>
+                </li>
+            </ul>
         </dialog>
-
+    
         <dialog id="BtrDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeBtrDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('BtrDialog')">Close</button>
         </dialog>
-
-
+    
+        <dialog id="MilesDialog" hidden>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('MilesDialog')">Close</button>
+        </dialog>
+    
         <dialog id="TempDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeTempDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('TempDialog')">Close</button>
         </dialog>
-
+    
         <dialog id="SleepDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeSleepDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('SleepDialog')">Close</button>
         </dialog>
-
+    
         <dialog id="HeartRDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeHeartRDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('HeartRDialog')">Close</button>
         </dialog>
-
-
+    
         <dialog id="WeightDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeWeightDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('WeightDialog')">Close</button>
         </dialog>
-
+    
         <dialog id="FatPDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeFatPDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('FatPDialog')">Close</button>
         </dialog>
-
+    
         <dialog id="BloodDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeBloodDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('BloodDialog')">Close</button>
         </dialog>
-
-
+    
         <dialog id="AVGDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeAVGDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('AVGDialog')">Close</button>
         </dialog>
-
-
-
+    
         <dialog id="WorkoutDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeWorkoutDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('WorkoutDialog')">Close</button>
         </dialog>
-
-
+    
         <dialog id="HydrationDialog" hidden>
-            <button class="btn custom-btn" type="button" onclick="closeHydrationDialog()">Close</button>
+            <button class="btn custom-btn" type="button" onclick="closeDialog('HydrationDialog')">Close</button>
         </dialog>
-        
     </section>
+    
 
     
     
